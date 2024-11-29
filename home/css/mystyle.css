@@ -1,6 +1,9 @@
 body {
-  background-image: url("https://i.pinimg.com/736x/6c/9e/ca/6c9ecaa3caceb0a0d816e88ce4e95fd2.jpg");
+  background-image: url("https://i.pinimg.com/736x/14/74/b1/1474b1e8cc00e4368c25e5c040be8bd3.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  height: 100vh;
   font-family: Arial, sans-serif;
   color: #333;
 }

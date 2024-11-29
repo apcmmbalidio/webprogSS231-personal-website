@@ -1,3 +1,38 @@
 body {
   background-image: url("https://t3.ftcdn.net/jpg/05/33/38/00/360_F_533380042_RWipnOtZP8SaOnLUY2VUpgS7pCOthiS2.jpg");
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  color: #444;
+}
+
+div {
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+img {
+  display: block;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
 }

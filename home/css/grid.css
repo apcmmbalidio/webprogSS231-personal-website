@@ -1,17 +1,19 @@
 .item1 { grid-area: header; }
-.item2 { grid-area: menu; }
-.item3 { grid-area: main; }
+.item2 { grid-area: left; }
+.item3 { grid-area: middle; }
 .item4 { grid-area: right; }
-.item5 { grid-area: main; }
-.item6 { grid-area: right; }
-.item7 { grid-area: footer; }
+.item5 { grid-area: downleft; }
+.item6 { grid-area: downmiddle; }
+.item7 { grid-area: downright; }
+.item8 { grid-area: footer; }
 
 .grid-container {
   display: grid;
   grid-template-areas:
     'header header header header header header'
-    'menu main main main right right'
-    'menu footer footer footer footer footer';
+    'left left middle middle right right'
+    'downleft downleft downmiddle downmiddle downright downright'
+    'footer footer footer footer footer footer';
   gap: 10px;
   background-color: #2196F3;
   padding: 10px;

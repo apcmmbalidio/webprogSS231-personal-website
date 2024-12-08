@@ -1,53 +1,52 @@
 .grid-container {
   display: grid;
   grid-template-areas:
-    "header header header header header header"
-    "left left middle middle right right"
-    "downleft downleft downmiddle downmiddle downright downright"
-    "footer footer footer footer footer footer";
-  gap: 20px;
-  background-color: #f0f0f0;
-  padding: 20px;
+    "header header header"
+    "left middle right"
+    "downleft downmiddle downright"
+    "footer footer footer";
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
 }
 
 .grid-container > div {
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
   padding: 20px;
-  font-size: 18px;
-  line-height: 1.6;
-  text-align: left;
+  font-size: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .item1 {
   grid-area: header;
-  text-align: center;
-  font-size: 36px;
-  font-weight: bold;
-  color: #333;
 }
 
-.item8 img {
-  display: block;
-  margin: 10px auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.item2 {
+  grid-area: left;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
+.item3 {
+  grid-area: middle;
 }
 
-table th, table td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: left;
+.item4 {
+  grid-area: right;
 }
 
-table th {
-  background-color: #2196F3;
-  color: white;
+.item5 {
+  grid-area: downleft;
+}
+
+.item6 {
+  grid-area: downmiddle;
+}
+
+.item7 {
+  grid-area: downright;
+}
+
+.item8 {
+  grid-area: footer;
 }

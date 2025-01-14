@@ -1,0 +1,39 @@
+    body {
+        background: linear-gradient(135deg, #3a0ca3, #7209b7, #f72585);
+        color: white;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .navbar {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .navbar-brand, .nav-link {
+        color: #fff;
+    }
+
+    .text-gradient {
+        background: linear-gradient(135deg, #f72585, #7209b7);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    .btn-primary {
+        background-color: #7209b7;
+        border: none;
+    }
+
+    .btn-outline-dark {
+        border-color: #7209b7;
+        color: #7209b7;
+    }
+
+    .btn-outline-dark:hover {
+        background-color: #7209b7;
+        color: white;
+    }
+
+    .footer {
+        background-color: #3a0ca3;
+        color: white;
+    }

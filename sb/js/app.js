@@ -1,14 +1,15 @@
-new Vue({
-    el: '#app',
-    data: {
-        newComment: {
-            name: '',
-            message: ''
-        },
-        comments: []
+const app = Vue.createApp({
+    data() {
+        return {
+            newComment: {
+                name: '',
+                message: ''
+            },
+            comments: []
+        };
     },
     methods: {
-        addComment: function() {
+        addComment() {
             if (this.newComment.name && this.newComment.message) {
                 const timestamp = new Date().toLocaleString();
                 const comment = {
@@ -17,14 +18,17 @@ new Vue({
                     timestamp: timestamp
                 };
 
-                this.comments.push(comment); 
+                this.comments.push(comment);
 
                 // Clear the form fields after posting the comment
-                this.newComment.name = '';  
-                this.newComment.message = ''; 
+                this.newComment.name = '';
+                this.newComment.message = '';
             } else {
                 alert('Please fill in both the name and the comment!');
             }
         }
     }
 });
+
+// Mount the app to the #app element
+app.mount('#app');

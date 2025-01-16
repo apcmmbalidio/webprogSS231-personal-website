@@ -3,28 +3,35 @@ const app = Vue.createApp({
         return {
             newComment: {
                 name: '',
-                message: '',
+                message: ''
             },
-            comments: [],
+            comments: []
         };
     },
     methods: {
         addComment() {
-            if (this.newComment.name.trim() && this.newComment.message.trim()) {
-                const timestamp = new Date().toLocaleString();
-                this.comments.push({
+            // Check if both name and message fields are filled
+            if (this.newComment.name && this.newComment.message) {
+                const timestamp = new Date().toLocaleString(); // Get the current timestamp
+                const comment = {
                     name: this.newComment.name,
                     message: this.newComment.message,
-                    timestamp: timestamp,
-                });
+                    timestamp: timestamp
+                };
+
+                // Push the new comment to the comments array
+                this.comments.push(comment);
+
+                // Clear the form fields after posting the comment
                 this.newComment.name = '';
                 this.newComment.message = '';
             } else {
+                // Alert if either field is empty
                 alert('Please fill in both the name and the comment!');
             }
-        },
-    },
+        }
+    }
 });
 
-// Mount the Vue app
+// Mount the Vue app to the #app element
 app.mount('#app');

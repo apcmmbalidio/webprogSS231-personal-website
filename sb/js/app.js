@@ -1,37 +1,36 @@
-const app = Vue.createApp({
+const commentApp = Vue.createApp({
     data() {
-        return {
-            newComment: {
-                name: '',
-                message: ''
-            },
-            comments: []
-        };
+      return {
+        newComment: {
+          name: '',
+          message: ''
+        },
+        comments: [] // Array to store the list of comments
+      };
     },
     methods: {
-        addComment() {
-            // Check if both name and message fields are filled
-            if (this.newComment.name && this.newComment.message) {
-                const timestamp = new Date().toLocaleString(); // Get the current timestamp
-                const comment = {
-                    name: this.newComment.name,
-                    message: this.newComment.message,
-                    timestamp: timestamp
-                };
-
-                // Push the new comment to the comments array
-                this.comments.push(comment);
-
-                // Clear the form fields after posting the comment
-                this.newComment.name = '';
-                this.newComment.message = '';
-            } else {
-                // Alert if either field is empty
-                alert('Please fill in both the name and the comment!');
-            }
+      addComment() {
+        // Validate that name and message fields are filled
+        if (this.newComment.name && this.newComment.message) {
+          const timestamp = new Date().toLocaleString(); // Get current date and time
+          const comment = {
+            name: this.newComment.name,
+            message: this.newComment.message,
+            timestamp: timestamp
+          };
+  
+          this.comments.push(comment); // Add new comment to the array
+  
+          // Clear the input fields after submission
+          this.newComment.name = '';
+          this.newComment.message = '';
+        } else {
+          alert('Please fill out both fields!');
         }
+      }
     }
-});
-
-// Mount the Vue app to the #app element
-app.mount('#app');
+  });
+  
+  // Mount the Vue app to the designated HTML element
+  commentApp.mount('#commentApp');
+  

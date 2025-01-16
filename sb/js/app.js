@@ -3,32 +3,28 @@ const app = Vue.createApp({
         return {
             newComment: {
                 name: '',
-                message: ''
+                message: '',
             },
-            comments: []
+            comments: [],
         };
     },
     methods: {
         addComment() {
-            if (this.newComment.name && this.newComment.message) {
+            if (this.newComment.name.trim() && this.newComment.message.trim()) {
                 const timestamp = new Date().toLocaleString();
-                const comment = {
+                this.comments.push({
                     name: this.newComment.name,
                     message: this.newComment.message,
-                    timestamp: timestamp
-                };
-
-                this.comments.push(comment);
-
-                // Clear the form fields after posting the comment
+                    timestamp: timestamp,
+                });
                 this.newComment.name = '';
                 this.newComment.message = '';
             } else {
                 alert('Please fill in both the name and the comment!');
             }
-        }
-    }
+        },
+    },
 });
 
-// Mount the app to the #app element
+// Mount the Vue app
 app.mount('#app');
